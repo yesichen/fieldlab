@@ -16,8 +16,7 @@ Interactive field theory visualization toolbox.
 ```bash
 pip install numpy matplotlib
 python day01_env_test.py
-
-```markdown
+```
 # Day 1 日志
 
 ## 今天做了什么
