@@ -13,8 +13,8 @@ print("Y shape:", Y.shape)   # (100, 100)
 print("X[0, :5] =", X[0, :5]) # 第一行的前5个x值
 print("Y[:5, 0] =", Y[:5, 0]) # 第一列的前5个y值
 
-# 3. 定义标量场 f(x,y) = x^2 + y^2
-Z = X**2 + Y**2
+# 3. 定义标量场 f(x,y) = x^2 +/- y^2
+Z = X**2 - Y**2
 
 # 4. 画等高线
 plt.figure(figsize=(8, 6))
@@ -30,12 +30,21 @@ plt.clabel(contour_lines, inline=True, fontsize=10, fmt='%.1f')
 # 5. 标注
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title(r'Contour of $f(x,y) = x^2 + y^2$')
+# 抛物面
+#plt.title(r'Contour of $f(x,y) = x^2 + y^2$')
+# 马鞍面
+plt.title(r'Contour of $f(x,y) = x^2 - y^2$')
 plt.axis('equal')   # 保持 x 和 y 比例一致
 plt.grid(True, alpha=0.3)
 
 # 6. 保存
-plt.savefig(r'D:\py_proj\fieldlab\day02_contour_x2+y2.png', dpi=150, bbox_inches='tight')
+plt.savefig('day02_contour.png', dpi=150, bbox_inches='tight')
+# 抛物面
+#plt.savefig(r'D:\py_proj\fieldlab\day02_contour_x2_plus_y2.png', dpi=150, bbox_inches='tight')
+# 马鞍面
+#plt.savefig(r'D:\py_proj\fieldlab\day02_contour_x2_minus_y2.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 print("图片已保存为 day02_contour.png")
+#print("图片已保存为 day02_contour_x2_plus_y2.png")
+#print("图片已保存为 day02_contour_x2_minus_y2.png")
