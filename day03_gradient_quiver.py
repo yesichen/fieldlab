@@ -32,7 +32,7 @@ plt.title(r'Gradient field of $f(x,y) = x^2 + y^2$')
 plt.axis('equal')
 plt.grid(True, alpha=0.3)
 
-# 8. 保存（相对路径！）
+# 8. 保存（相对路径）
 plt.savefig('day03_gradient_quiver.png', dpi=150, bbox_inches='tight')
 plt.show()
 
